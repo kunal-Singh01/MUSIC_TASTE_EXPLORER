@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Tastes Explorer</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    
+    
+
+</head>
+<body>
+    <header>
+        <h1>Music Tastes Explorer</h1>
+        <nav>
+            <ul>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <audio id="audioPlayer" controls style="display: none;">
+        <source id="audioSource" src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+
+    <main>
+        <!-- Interactive Map Section -->
+        <section id="map">
+            <h2>Explore Music by Location</h2>
+            <div id="mapid"></div>
+            <button onclick="goToRandomLocation()">Go to Random Location</button>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <h2>Find Your Music Match</h2>
+            <form id="music-quiz">
+                <!-- Add quiz questions here -->
+                <label for="question1">What genre do you prefer?</label>
+                <select id="question1">
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="hiphop">Hip Hop</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <!-- Add more questions as needed -->
+                <button type="submit">Find My Match</button>
+            </form>
+        </section>
+
+        <!-- Music Playback Section -->
+        <section id="playback">
+            <h2>Listen to Popular Music</h2>
+            <div id="music-player">
+                <!-- Integrate a music player here (e.g., Spotify embed) -->
+                <div class="grid">
+                    <div class="card" data-song="songs/01.mp3">
+                        <img src="images/001.png" alt="Shape of You Album Cover">
+                        <p>Shape of You</p>
+                    </div>
+
+                    <div class="grid">
+                        <div class="card">
+                            <img src="images/Adele.jpeg" alt="Shape of You Album Cover">
+                            <p>Adele</p>
+                        </div>
+                    
+                        <div class="grid">
+                            <div class="card">
+                                <img src="images/jolt.jpeg" alt="Shape of You Album Cover">
+                                <p>Jolt</p>
+                            </div>
+                        
+                            <div class="grid">
+                                <div class="card">
+                                    <img src="images/Eminem.jpeg" alt="Shape of You Album Cover">
+                                    <p>Eminem</p>
+                                </div>
+
+                            <div class="grid">
+                                <div class="card">
+                                    <img src="images/cc.jpeg" alt="Shape of You Album Cover">
+                                    <p>Shape</p>
+                                </div>
+                            
+                                <div class="grid">
+                                    <div class="card">
+                                        <img src="images/baodboy.jpeg" alt="Shape of You Album Cover">
+                                        <p>Badboy</p>
+                                    </div>
+                                    
+                                    <div class="grid">
+                                        <div class="card">
+                                            <img src="images/karan aujla.jpeg" alt="Shape of You Album Cover">
+                                            <p>On top</p>
+                                            
+                                    </div>
+                            
+                    
+            </div>
+        </section>
+
+        <!-- Timeline Exploration Section -->
+        <section id="timeline">
+            <h2>Explore Music Over Time</h2>
+            <div id="timeline-explorer">
+                <!-- Timeline content goes here -->
+                <div class="grid">
+                    <div class="card">
+                        <img src="images/diljit dosanjh.jpeg" alt="Shape of You Album Cover">
+                        <p>1950's</p>
+                        </div>
+
+                        <div class="grid">
+                            <div class="card">
+                                <img src="images/lovely.jpeg" alt="Shape of You Album Cover">
+                                <p>1980's</p>
+                            </div>
+
+                            <div class="grid">
+                                <div class="card">
+                                    <img src="images/Eminem.jpeg" alt="Shape of You Album Cover">
+                                    <p>1990's</p>
+                                </div>
+
+                                <div class="grid">
+                                    <div class="card">
+                                        <img src="images/cc.jpeg" alt="Shape of You Album Cover">
+                                        <p>2000's</p>
+                                    </div>
+                            
+                                    <div class="grid">
+                                        <div class="card">
+                                            <img src="images/arcade .jpg" alt="Shape of You Album Cover">
+                                            <p>2010</p>
+                                        </div>
+                                        <div class="grid">
+                                            <div class="card">
+                                                <img src="images/dandlions.jpeg" alt="Shape of You Album Cover">
+                                                <p>2020</p>
+                                            </div>
+
+                                            <div class="grid">
+                                                <div class="card">
+                                                    <img src="images/arcade .jpg" alt="Shape of You Album Cover">
+                                                    <p>2024</p>
+                                                </div>
+                                                
+                    </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison">
+            <h2>Compare Music Tastes</h2>
+            <div id="comparison-tool">
+                <!-- Comparison tool content goes here -->
+                <div class="grid">
+                    <div class="card">
+                        <img src="images/Adele.jpeg" alt="Shape of You Album Cover">
+                        <p>English</p>
+                    </div>
+                    <div class="grid">
+                        <div class="card">
+                            <img src="images/hindi.jpeg" alt="Shape of You Album Cover">
+                            <p>Hindi</p>
+                        </div>
+                        <div class="grid">
+                            <div class="card">
+                                <img src="images/diljit dosanjh.jpeg" alt="Shape of You Album Cover">
+                                <p>Punjabi</p>
+                            </div>
+                            <div class="grid">
+                                <div class="card">
+                                    <img src="images/marathi.jpeg" alt="Shape of You Album Cover">
+                                    <p>Marathi</p>
+                                </div>
+                                <div class="grid">
+                                    <div class="card">
+                                        <img src="images/cc.jpeg" alt="Shape of You Album Cover">
+                                        <p>Gujrati</p>
+                                    </div>
+                                    <div class="grid">
+                                        <div class="card">
+                                            <img src="images/Ajay hooda.jpeg" alt="Shape of You Album Cover">
+                                            <p>Haryanvi</p>
+                                        </div>
+
+                                        <div class="grid">
+                                            <div class="card">
+                                                <img src="images/tamil.jpeg" alt="Shape of You Album Cover">
+                                                <p>Tamil</p>
+                                            </div>
+                                        
+                                        
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Music Tastes Explorer</p>
+    </footer>
+
+    <script>
+        // Initialize the map
+        var map = L.map('mapid').setView([51.505, -0.09], 2);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '©️ OpenStreetMap contributors'
+        }).addTo(map);
+
+        var customIcon = L.icon({
+            iconUrl: 'images/pin.avif', 
+            iconSize: [40, 40], 
+            iconAnchor: [20, 40], 
+            popupAnchor: [0, -40] 
+        });
+
+        var marker = null;
+
+        function goToRandomLocation() {
+            var lat = (Math.random() * 180 - 90).toFixed(4);
+            var lon = (Math.random() * 360 - 180).toFixed(4);
+            map.setView([lat, lon], 4);
+
+            if (marker) {
+                marker.setLatLng([lat, lon]);
+            } else {
+    
+                marker = L.marker([lat, lon], { icon: customIcon }).addTo(map);
+            }
+        }
+
+
+
+    const audioPlayer = document.getElementById('audioPlayer');
+    const audioSource = document.getElementById('audioSource');
+    
+    // Select all cards
+    const cards = document.querySelectorAll('.card');
+
+    // Add event listeners to each card
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Get the song file from the card's data-song attribute
+            const song = this.getAttribute('data-song');
+
+            // Set the audio source to the selected song
+            audioSource.src = song;
+            
+            // Load and play the song
+            audioPlayer.style.display = 'block'; // Show the audio player
+            audioPlayer.load();
+            audioPlayer.play();
+        });
+    });
+
+
+
+    
+</script>
+
+   
+</body>
+</html>
