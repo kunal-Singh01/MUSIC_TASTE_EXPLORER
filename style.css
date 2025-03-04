@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: skyblue;
+    color: black;
+    padding: 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    background-color: white;
+    margin: 1em 0;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    
+    
+}
+.grid {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 10px;
+    overflow-x: auto all ;
+    text-align: center;
+    
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow-x: auto all; 
+    cursor: pointer;
+    
+    
+}
+
+section h2 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+#mapid {
+    height: 500px;
+    width: 100%;
+    border-radius: 5px;
+    margin:auto
+}
+
+button {
+    background-color: skyblue;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: skyblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 1 5px;
+}
+
+form select, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+footer {
+    background-color: skyblue;
+    color: black;
+    text-align: center;
+    padding: 0.5em 0.5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+#audioPlayer {
+    display: block; /* Change to 'block' if you want it visible */
+    width: 300px;   /* Adjust the width */
+    margin: 20px auto; /* Center the player horizontally */
+}
+
+#audioPlayer::-webkit-media-controls {
+    background-color: #f0f0f0; /* Change background color */
+    border-radius: 10px;       /* Rounded corners */
+}
+
+#audioPlayer::-webkit-media-controls-play-button {
+    background-color: #4CAF50; /* Change play button color */
+}
+
+#audioPlayer::-webkit-media-controls-time-remaining-display {
+    color: #333; /* Change text color for the time display */
+}
+
+#audioPlayer::-webkit-media-controls-volume-slider {
+    background-color: #ccc; /* Customize the volume slider */
+}
+
+
